@@ -1,0 +1,38 @@
+<!--input [(ngModel)] = "taskName"-->
+<!--button (click) = 'addTask(taskDate, taskName)'>Dodaj</button-->
+<button type="button" class="btn btn-light" style="width: 100%" (click)="modal.show()">Dodaj
+  <b>+</b>
+</button>
+<app-modal-form #modal>
+  <div class="app-modal-header">
+    Dodaj zadanie
+  </div>
+  <div class="app-modal-body">
+
+    <div class="form-group ">
+      <label for="taskName">Nazwa</label>
+      <input id=" taskName" [(ngModel)]="taskName" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label>Opis</label>
+
+      <textarea [(ngModel)]="taskDesc" class="form-control"  rows="3"></textarea>
+    </div>
+    <div class="form-group">
+      <label>Stopień ważnosci</label>
+      <select class="form-control" id="exampleFormControlSelect1" [(ngModel)] = "taskImportance">
+        <option>Niski</option>
+        <option>Średni</option>
+        <option>Wysoki</option>
+      </select>
+    </div>
+
+
+
+  </div>
+  <div class="app-modal-footer">
+    <button type="button" class="btn btn-default" (click)="modal.hide()">Zamknij</button>
+    <button id= 'save' type="button" class="btn btn-primary" (click)='addTask()'>Zapisz</button>
+  </div>
+</app-modal-form>

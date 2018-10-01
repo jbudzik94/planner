@@ -1,0 +1,75 @@
+.glyphicon-ok:hover{
+    color: #7CEB92;
+}
+
+.glyphicon-trash:hover{
+    color: #FF6666;
+}
+
+.glyphicon-pencil:hover{
+    color: #66A9FF;
+}
+
+.glyphicon{
+    cursor: pointer;
+    color:  grey;
+}
+
+.taskName{
+    width: 100%;
+    text-align: center;
+    height: 80%;
+    cursor: pointer;
+    margin-top: 10px;
+    border: 1px;
+    border-radius: 5px;
+}
+
+.niski{
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce
+}
+
+.sredni{
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc
+}
+
+.wysoki{
+    background-color: rgb(235, 204, 209);
+    color: #a94442;
+    border-color: rgb(235, 204, 209);
+}
+
+
+
+
+
+div.taskName:hover span {
+  display: inline;
+
+}
+
+div.taskName span {
+
+  display:none;
+}
+
+.span-wrapper{
+  width: 10%;
+}
+
+
+.description{
+  font-size: 12px;
+}
+
+.completed{
+  background-color: rgb(204, 235, 212);
+  color: #3f722f;
+  border-color: rgb(216, 235, 204);
+}
+
+

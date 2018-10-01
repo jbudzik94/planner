@@ -1,0 +1,25 @@
+<div style=" width: 100%; height: 90px; ">
+    <img src = "../../assets/images/planner.png" style ="margin-top: 10px; margin-left: 1%;margin-right: 1%; float: left;">
+    <p align="left" style ="font-size: 40px; padding-top: 20px; color: grey; font-family: 'Product Sans',Arial,sans-serif; float: left;" >Planer</p>
+    <p  align = "left"  style ="font-size: 25px; padding-top: 37px; color: grey; margin-left: 24%; font-family: 'Product Sans',Arial,sans-serif; float: left;" (click)='getPreviousWeek()' >&lt;</p>
+    <p  align = "left"  style ="font-size: 25px; padding-top: 37px; color: grey; margin-left: 2%; font-family: 'Product Sans',Arial,sans-serif; float: left;" (click)='getNextWeek()'>&gt;</p>
+    <p align = "left"  style ="font-size: 25px; padding-top: 35px; color: grey; margin-left: 45%; font-family: 'Product Sans',Arial,sans-serif;" >{{week[0] | date:'MMMM'}} {{week[0] | date:'yyyy'}}</p>
+</div>
+<!--p *ngFor=' let day of week' style=' width: 14%;  float: left;'>
+  {{day | date:'shortDate'}}
+  <app-add-task [taskDate]='day'></app-add-task>
+  <app-task-list [day]='day'></app-task-list>
+</p-->
+
+<div *ngFor=' let day of week' style="width: 14.28%;  float: left; height:80%; ">
+
+  <div style=" border-top:1px solid grey; border-bottom:1px solid grey;  border-right:1px solid grey;">
+    <p align="left" style ="color: grey; font-size: 12px; line-height: 32px; margin-left: 16px; position: relative;">{{day | date:'EEE'}}</p>
+    <p align="left" style = "font-size: 40px; line-height: 32px; margin-left: 20px;" >{{day | date:'d'}}</p>
+  </div>
+
+  <div style=" height:100%; border-bottom:1px solid grey;  border-right:1px solid grey;">
+    <app-add-task [taskDate]='day'></app-add-task>
+    <app-task-list [day]='day'></app-task-list>
+  </div>
+</div>
